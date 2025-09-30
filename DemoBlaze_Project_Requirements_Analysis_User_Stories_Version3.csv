@@ -1,0 +1,17 @@
+Sheet,ID,As a...,I want...,So that...,Priority,Notes
+UserStories,US-001,Traveler,select a departure and destination city and search for flights,I can view available options for my route,High,Image 1
+UserStories,US-002,Traveler,choose a flight and complete purchase with payment details,I can reserve and pay for my ticket,High,Images 2 & 3
+UserStories,US-003,Traveler,see a confirmation with the purchase details (ID, amount, masked card, date),I have proof of purchase,High,Image 4
+AcceptanceCriteria,US-001-AC1,"Given the home page (Image 1) When I select valid distinct cities and click 'Find Flights' Then I see a list of flights for that route (Image 2).",,,,
+AcceptanceCriteria,US-001-AC2,"Given I have not selected both cities When I click 'Find Flights' Then I see a clear validation message and remain on the home page.",,,,
+AcceptanceCriteria,US-001-AC3,"Given I select the same city for departure and destination When I click 'Find Flights' Then I see an error preventing the search.",,,,
+AcceptanceCriteria,US-002-AC1,"Given a results list (Image 2) When I click 'Choose This Flight' Then I am taken to the purchase page (Image 3) with flight summary (airline, flight #, price, taxes, total).",,,,
+AcceptanceCriteria,US-002-AC2,"Given the purchase page When I enter valid purchaser and card details Then the 'Purchase Flight' action succeeds.",,,,
+AcceptanceCriteria,US-002-AC3,"Given invalid card month/year (BVA: month ∈ [1..12]) When I submit Then I see field-level errors and purchase is blocked.",,,,
+AcceptanceCriteria,US-002-AC4,"Given required fields (Name, Credit Card Number) are empty When I submit Then I see required-field validation and no purchase occurs.",,,,
+AcceptanceCriteria,US-002-AC5,"Given a selected flight price P When I proceed to purchase Then the total cost shown matches P (+ any displayed fees/taxes) with no mismatch.",,,,
+AcceptanceCriteria,US-003-AC1,"Given a successful purchase When I reach confirmation (Image 4) Then I see Thank you header, unique Id, Status, Amount (currency), masked Card Number, Expiration, Auth Code, and Date.",,,,
+AcceptanceCriteria,US-003-AC2,"Given a successful purchase When I view Amount Then it equals the final total from the purchase page.",,,,
+Traceability,US-001,TS-001|TS-002,TC-001,,,
+Traceability,US-002,TS-002|TS-003,TC-002|TC-003,,,
+Traceability,US-003,TS-003,TC-004,,,

@@ -1,0 +1,4 @@
+Sheet,ID,Name,Preconditions,Steps,Expected
+Scenarios,TS-001,Search flights for valid route,Home page loaded,"1) Select departure=Paris 2) Select destination=Berlin 3) Click Find Flights",Flights list shows options for Paris→Berlin (Image 2)
+Scenarios,TS-002,Select a flight from results,Flights list displayed,"1) Click 'Choose This Flight' for any row",Navigates to purchase page showing chosen flight summary (Image 3)
+Scenarios,TS-003,Complete purchase successfully,Purchase page displayed with totals,"1) Fill valid Name/Address/City/State/Zip 2) Card Type=Visa 3) Card Number valid (passes Luhn) 4) Month=11 5) Year=next year 6) Click Purchase",Confirmation page shown with details (Image 4)

@@ -1,0 +1,12 @@
+Sheet,Section,Item,Details
+Strategy,Feature Under Test,"Flight Filters (new)","Add filters for airline, price range, depart time on results page"
+Impact Areas,IA-1,Results rendering,"Filter application affects rows shown and totals"
+Impact Areas,IA-2,Selection flow,"Chosen flight after filtering must persist correctly to purchase page"
+Impact Areas,IA-3,Pricing display,"No change to price/fees; must remain consistent end-to-end"
+Regression Tests,TC-R1,Default results unchanged,"With no filters applied, results equal baseline (control route)."
+Regression Tests,TC-R2,Airline filter behavior,"Filter by 'United' shows only United flights; clearing restores all."
+Regression Tests,TC-R3,Price range filter boundaries (BVA),"Min=200, Max=400 includes flights with 200 and 400."
+Regression Tests,TC-R4,Filter + selection integrity,"Apply filters then choose a flight; verify selected details carry to purchase."
+Regression Tests,TC-R5,Filters persistence on back navigation,"After visiting purchase and going Back, filters and scroll position persist."
+Automation Candidates,Auto-1,TC-R2,"Stable DOM, deterministic data; high ROI. Assertion: all rows airline=selected."
+Automation Candidates,Auto-2,TC-R4,"Critical path; prevents regression where selection context lost after filtering."

@@ -1,0 +1,4 @@
+Story ID,Story Name,Scenario IDs,Test Case IDs,Defects Linked
+US-001,Search for flights,TS-001|TS-002,TC-001,BUG-001
+US-002,Choose flight and purchase,TS-002|TS-003,TC-002|TC-003,
+US-003,See confirmation details,TS-003,TC-004,BUG-002
